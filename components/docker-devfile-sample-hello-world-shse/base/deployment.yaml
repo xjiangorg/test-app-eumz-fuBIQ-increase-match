@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: docker-devfile-sample-hello-world-shse
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: docker-devfile-sample-hello-world-shse
+    app.kubernetes.io/part-of: test-app-eumz
+  name: docker-devfile-sample-hello-world-shse
+spec:
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: docker-devfile-sample-hello-world-shse
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: docker-devfile-sample-hello-world-shse
+    spec:
+      containers:
+      - image: image
+        imagePullPolicy: Always
+        name: container-image
+        ports:
+        - containerPort: 8081
+        resources: {}
+status: {}
