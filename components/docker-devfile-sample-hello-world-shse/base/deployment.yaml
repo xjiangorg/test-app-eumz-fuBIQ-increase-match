@@ -22,7 +22,7 @@ spec:
         app.kubernetes.io/instance: docker-devfile-sample-hello-world-shse
     spec:
       containers:
-      - image: image
+      - image: quay.io/quay_xjiang/build-e2e-gjtg-tenant/test-app-eumz/docker-devfile-sample-hello-world-shse@sha256:a527143b88240b04cd5041fd9a66a78c7c3f0f5df421d9571b5a1d2ebe6ab760
         imagePullPolicy: Always
         name: container-image
         ports:
