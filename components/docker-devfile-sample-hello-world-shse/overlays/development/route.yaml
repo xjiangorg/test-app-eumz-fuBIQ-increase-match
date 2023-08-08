@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: docker-devfile-sample-hello-world-shse
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: docker-devfile-sample-hello-world-shse
+    app.kubernetes.io/part-of: test-app-eumz
+  name: docker-devfile-sample-hel1u4u
+spec:
+  port:
+    targetPort: 8081
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: docker-devfile-sample-hello-world-shse
+    weight: 100
+status: {}
